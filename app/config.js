@@ -26,4 +26,4 @@ async function connectToDatabase() {
     }
 }
 
-export { APP_NAME, PORT, globalResponseHeaders, connectToDatabase };
+export { APP_NAME, PORT, connectToDatabase };

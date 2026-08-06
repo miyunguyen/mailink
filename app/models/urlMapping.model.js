@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const urlMappingSchema = new mongoose.Schema(
     {
-        alias: { type: String, required: true, unique: true },
+        _id: { type: Number, required: true },
+        alias: { type: String, required: true, index: true, unique: true },
         original_url: { type: String, required: true },
         click_count: { type: Number, default: 0 },
         created_at: { type: Date, default: Date.now },

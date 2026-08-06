@@ -11,6 +11,9 @@ const app = express();
 // Parse JSON body
 app.use(express.json());
 
+// CORS
+app.use(globalResponseHeaders);
+
 // Static page
 app.use(express.static('public'));
 
@@ -19,6 +22,5 @@ app.use('/api/urls', urlRoute);
 
 // Middleware
 app.use(errorHandler);
-app.use(globalResponseHeaders);
 
 export default app;
