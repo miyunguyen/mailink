@@ -11,7 +11,7 @@
 
 ## About
 
-MaiLink is an URL shortener web app that let you access a long URL by using a shorter, easy-to-remember alias. It uses [Node.js][nodejs] for the backend server, [MongoDB][mongodb] for the NoSQL database.
+MaiLink is an URL shortener web app that let you access a long URL by using a shorter, easy-to-remember alias. It uses [Node.js](https://nodejs.org/docs/latest/api/) for the backend server, [MongoDB](https://www.mongodb.com/docs/) for the NoSQL database.
 
 
 ## Supported features
