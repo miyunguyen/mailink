@@ -1,4 +1,4 @@
-export class Base64Helper {
+export class Base62Helper {
     static BASE62_CHARS =
         '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 

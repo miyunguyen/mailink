@@ -4,7 +4,6 @@ export class IdGeneratorService {
     constructor() {
         this.machineId = 0;
         this.counterRepo = new CounterRepository();
-        this.timestamp = -1;
     }
 
     async getNextSequence(counterName) {
