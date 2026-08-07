@@ -14,4 +14,13 @@ export class Base62Helper {
         }
         return encoding;
     }
+
+    static decode(str) {
+        let decoding = 0n;
+        for (const char of str) {
+            const index = this.BASE62_CHARS.indexOf(char);
+            decoding = decoding * 62n + BigInt(index);
+        }
+        return Number(decoding);
+    }
 }

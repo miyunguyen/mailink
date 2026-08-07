@@ -5,4 +5,9 @@ export class UrlsRepository {
         const url = await UrlMapping.create(data);
         return url;
     }
+
+    async findById(data) {
+        const url = await UrlMapping.findById(data);
+        return url;
+    }
 }

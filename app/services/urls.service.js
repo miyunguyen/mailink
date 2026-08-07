@@ -29,7 +29,9 @@ export class UrlsService {
         };
     }
 
-    async getAnalytics(alias) {
-        return;
+    async getUrlByAlias(alias) {
+        const id = Base62Helper.decode(alias);
+        const url = await urlRepo.findById(id);
+        return url;
     }
 }

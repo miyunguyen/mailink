@@ -18,7 +18,7 @@ app.use(globalResponseHeaders);
 app.use(express.static('public'));
 
 // Routing
-app.use('/api/urls', urlRoute);
+app.use('/', urlRoute);
 
 // Middleware
 app.use(errorHandler);
