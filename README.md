@@ -20,7 +20,7 @@ MaiLink is an URL shortener web app that let you access a long URL by using a sh
 | ------------------------------------------------ | -------------------------------------------- |
 | Shorten your URL                                 | ✅                                           |
 | Redirect to original link                        | ✅                                           |
-| Get alias's analytics                            | 🔜                                           |
+| Get alias's analytics                            | ✅                                           |
 
 Something missing? Make an issue and let me know!
 
