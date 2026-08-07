@@ -11,11 +11,11 @@ const app = express();
 // Parse JSON body
 app.use(express.json());
 
-// CORS
-app.use(globalResponseHeaders);
-
 // Static page
 app.use(express.static('public'));
+
+// CORS
+app.use(globalResponseHeaders);
 
 // Routing
 app.use('/', urlRoute);
