@@ -20,10 +20,8 @@ export class UrlsController {
                 });
             }
 
-            let url;
-
             try {
-                url = new URL(original_url);
+                const url = new URL(original_url);
             } catch (error) {
                 res.status(400).json({
                     sucess: false,
@@ -59,6 +57,7 @@ export class UrlsController {
         try {
             const alias = req.params.id;
             const response = await urlService.getUrlByAlias(alias);
+            await urlService.updateAnalytics(alias, response);
             res.status(302).redirect(response.original_url);
         } catch (error) {
             next(error);

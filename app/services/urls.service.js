@@ -34,4 +34,18 @@ export class UrlsService {
         const url = await urlRepo.findById(id);
         return url;
     }
+
+    async updateAnalytics(alias, current_data) {
+        const id = Base62Helper.decode(alias);
+
+        let { click_count, last_accessed } = current_data;
+        click_count += 1;
+        last_accessed = Date.now();
+
+        const updated_data = {
+            click_count: click_count,
+            last_accessed: last_accessed,
+        };
+        await urlRepo.updateById(id, updated_data);
+    }
 }

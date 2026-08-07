@@ -10,4 +10,15 @@ export class UrlsRepository {
         const url = await UrlMapping.findById(data);
         return url;
     }
+
+    async updateById(id, data) {
+        await UrlMapping.findOneAndUpdate(
+            { _id: id },
+            {
+                click_count: data.click_count,
+                last_accessed: data.last_accessed,
+            },
+            { upsert: false }
+        );
+    }
 }
