@@ -27,8 +27,8 @@ export class UrlsController {
             try {
                 const url = new URL(original_url);
             } catch (error) {
-                res.status(400).send(`
-                    <span class="text-danger">${original_url} is invalid, please check again!</span>
+                res.send(`
+                    <span class="text-danger">${original_url} is invalid URL, please check again!</span>
                 `);
             }
 
