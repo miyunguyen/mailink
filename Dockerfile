@@ -8,8 +8,6 @@ COPY . .
 
 RUN npm ci --only=production
 
-RUN npm i --save-dev nodemon
-
 EXPOSE 8080
 
 CMD ["npm", "start"]
