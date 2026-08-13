@@ -30,8 +30,13 @@ export class UrlsService {
     }
 
     async getUrlByAlias(alias) {
+        let url;
         const id = Base62Helper.decode(alias);
-        const url = await urlRepo.findById(id);
+        url = await urlRepo.findById(id);
+
+        if (!url) {
+            url = await urlRepo.findByAlias(alias);
+        }
         return url;
     }
 

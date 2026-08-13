@@ -12,6 +12,5 @@ export function globalResponseHeaders(request, response, next) {
         'Access-Control-Allow-Methods',
         'POST,GET,PATCH,DELETE,OPTIONS'
     );
-    response.header('Content-Type', 'application/json');
     return next();
 }

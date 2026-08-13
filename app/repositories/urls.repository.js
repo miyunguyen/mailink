@@ -11,6 +11,11 @@ export class UrlsRepository {
         return url;
     }
 
+    async findByAlias(data) {
+        const url = await UrlMapping.findOne({ alias: data });
+        return url;
+    }
+
     async updateById(id, data) {
         await UrlMapping.findOneAndUpdate(
             { _id: id },
