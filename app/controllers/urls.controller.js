@@ -3,7 +3,7 @@ import path from 'path';
 
 const urlService = new UrlsService();
 
-const hostUrl = process.env.HOST_URL || '';
+const hostUrl = process.env.HOST_URL || 'http://localhost:8080';
 
 export class UrlsController {
     async shortenUrl(req, res, next) {
