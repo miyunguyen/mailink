@@ -40,6 +40,16 @@ export class UrlsController {
                 });
             }
 
+            if (custom_alias) {
+                const url = await urlService.getUrlByAlias(custom_alias);
+
+                if (url) {
+                    res.send(`
+                        <span class="text-danger">${hostUrl}/${custom_alias} is already existed, please try again!</span>
+                    `);
+                }
+            }
+
             const response = await urlService.shortenUrl(
                 original_url,
                 custom_alias || null
@@ -59,6 +69,9 @@ export class UrlsController {
                 </div>
             `);
         } catch (error) {
+            res.send(`
+                <span class="text-danger">${error}</span>
+            `);
             next(error);
         }
     }
