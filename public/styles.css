@@ -87,7 +87,7 @@ input:focus {
 }
 
 .copy-button {
-    background-color: #233275;
+    background-color: #e8f0fe;
     color: #fff;
     align-items: center;
     display: inline-flex;
@@ -99,6 +99,10 @@ input:focus {
     padding: .5375rem .725rem;
     border: 1.5px solid #ccc;
     cursor: pointer;
+}
+
+.copy-button > a:any-link {
+    text-decoration: none;
 }
 
 .main {

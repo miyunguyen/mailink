@@ -64,7 +64,12 @@ export class UrlsController {
                     </label>
                     <div class="row mb-3">
                         <input type="text" read-only value="${shortenUrl}" autofocus disabled>
-                        <button type="button" class="copy-button" onclick="navigator.clipboard.writeText('${shortenUrl}')">Copy</button>
+                        <button type="button" class="copy-button" onclick="navigator.clipboard.writeText('${shortenUrl}')">
+                            <img src="./assets/copy-regular-full.svg" width="24px"></img>
+                        </button>
+                        <button type="button" class="copy-button">
+                            <a href="${shortenUrl}" target="_blank" alt='visit-the-link'>Visit</a>
+                        </button>
                     </div>
                 </div>
             `);
