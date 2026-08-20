@@ -1,6 +1,6 @@
-import express from 'express';
-import 'dotenv/config';
 import bodyParser from 'body-parser';
+import 'dotenv/config';
+import express from 'express';
 
 import { globalResponseHeaders } from './middlewares/cors.middleware.js';
 import { errorHandler } from './middlewares/error.middleware.js';
